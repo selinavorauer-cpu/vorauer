@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-rose-50 text-slate-900 antialiased;
+  }
+  
+  /* Override default serif behavior to use Inter everywhere */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Force override for any remaining utility classes */
+@layer utilities {
+  .font-serif {
+    font-family: 'Inter', sans-serif !important;
+  }
+  .font-sans {
+    font-family: 'Inter', sans-serif !important;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-purple-600;
+}
